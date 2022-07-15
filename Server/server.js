@@ -4,7 +4,7 @@ const url = require('url');
 dotenv.config();
 const app = express(),
       bodyParser = require("body-parser");
-      port = process.env.PORT;
+      port = process.env.NODEPORT;
 
 const { Pool, Client } = require('pg');
 const MySQLPool = new Pool();
