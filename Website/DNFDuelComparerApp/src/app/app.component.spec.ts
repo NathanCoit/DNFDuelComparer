@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'DNFDuelComparerApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DNFDuelComparerApp');
+    expect(app.mstrTitle).toEqual('DNFDuelComparerApp');
   });
 
   it('should render title', () => {

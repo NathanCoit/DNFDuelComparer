@@ -1,11 +1,11 @@
 export interface ICharacter {
-    name: String,
-    health: Number,
-    guardGauge: Number,
-    manaRegenPerSec: Number,
-    preJumpFrames: Number,
-    backDashFrames: Number,
-    forwardDashFrames: Number
+    name: string,
+    health: number,
+    guardGauge: number,
+    manaRegenPerSec: number,
+    preJumpFrames: number,
+    backDashFrames: number,
+    forwardDashFrames: number
 }
 
 export interface ICharacters extends Array<ICharacter>

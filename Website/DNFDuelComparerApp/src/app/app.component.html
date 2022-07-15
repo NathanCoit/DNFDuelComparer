@@ -1,11 +1,32 @@
 <div>
-  <h1>Character 1</h1>
-  <button mat-button [matMenuTriggerFor]="menu">Character</button>
-  <mat-menu #menu="matMenu">
+  <h1>Your Character</h1>
+  <button mat-button [matMenuTriggerFor]="character1Menu">{{mlstPickedCharacters[0]}}</button>
+  <mat-menu #character1Menu="matMenu">
     <ng-template matMenuContent>
-      <button mat-menu-item *ngFor="let character of Characters">{{character.name}}</button>
+      <button mat-menu-item *ngFor="let character of mlstICharacters"
+        (click)="setCharacter(0, character.name)">{{character.name}}</button>
     </ng-template>
   </mat-menu>
+
+  <h1>Opponent Character</h1>
+  <button mat-button [matMenuTriggerFor]="character2Menu">{{mlstPickedCharacters[1]}}</button>
+  <mat-menu #character2Menu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item *ngFor="let character of mlstICharacters"
+        (click)="setCharacter(1, character.name)">{{character.name}}</button>
+    </ng-template>
+  </mat-menu>
+
+  <h1>Interaction</h1>
+  <button mat-button [matMenuTriggerFor]="interactionMenu">{{mstrInteraction}}</button>
+  <mat-menu #interactionMenu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item *ngFor="let interaction of mlstIInteractions"
+        (click)="setInteraction(interaction.name)">{{interaction.name}}</button>
+    </ng-template>
+  </mat-menu>
+
+  <h1>{{mstrWhatDo}}</h1>
 </div>
 
 <router-outlet></router-outlet>
